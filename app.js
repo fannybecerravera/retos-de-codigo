@@ -81,6 +81,37 @@ const areValidCredentials = (name, password) => {
 };
 console.log(areValidCredentials('fanny', 'holamundo'));
 
+/* Ejercicio 5
+Dada una lista de números enteros no negativos y una suma 
+objetivo, encuentre un par de números que sumen a la suma 
+objetivo. */
+
+function findPairForSum(array, number) {
+
+}
+
+/* Ejercicio 6
+ Escriba una función llamada "filterOddElements".
+
+Dado un array de números,"filterOddElements" devuelve un array 
+que contiene sólo los números impares del array dado.*/
+
+function filterOddElements(arr) {
+  // your code here
+  let output = arr.filter(number => number%2 !== 0);
+  return output;
+}
+output = filterOddElements([1, 2, 3, 4, 5]);
+console.log (output);
+
+//arrow function
+
+const filterOddElements = (arr) => {
+  let output = arr.filter(number => number%2 !== 0);
+  return output;
+};
+output = filterOddElements([1, 2, 3, 4, 5]);
+console.log (output);
 
 
 
