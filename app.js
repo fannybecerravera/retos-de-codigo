@@ -54,3 +54,33 @@ const convertDoubleSpaceToSingle = (str) => {
 };
 console.log(convertDoubleSpaceToSingle("string  with  double  spaces"));
 
+/* Ejercicio 4
+ */
+
+function areValidCredentials(name, password) {
+  let value1 = name.length;
+  let value2 = password.length;
+  if(3 < value1 && 8 <= value2){
+    return true;
+  }else {
+    return false;
+  }
+}
+console.log(areValidCredentials('fanny', 'holamundo'));
+
+// arrow function
+
+const areValidCredentials = (name, password) => {
+  let value1 = name.length;
+  let value2 = password.length;
+  if(3 < value1 && 8 <= value2){
+    return true;
+  }else {
+    return false;
+  }
+};
+console.log(areValidCredentials('fanny', 'holamundo'));
+
+
+
+
