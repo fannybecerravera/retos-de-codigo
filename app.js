@@ -113,5 +113,63 @@ const filterOddElements = (arr) => {
 output = filterOddElements([1, 2, 3, 4, 5]);
 console.log (output);
 
+/* Ejercicio 7
+Escriba una función llamada "findShortestWordAmongMixedElements".
+Dado un array, "findShortestWordAmongMixedElements" devuelve 
+la cadena más corta dentro del array dado. 
+Notas:
+Si hay vínculos, debería devolver el primer elemento que aparezca en el array dado.
+Espere que el array tenga otros valores además de las cuerdas.
+Si el array dado está vacío, debería devolver una cadena vacía.
+Si el array dado no contiene cadenas, debería devolver una cadena vacía.*/
 
+function findShortestWordAmongMixedElements(arr) {
+  
+}
 
+/* Ejercicio 8
+Escribe una función llamada calculateBillTotal.
+
+Dado el pre impuesto y la cantidad antes de propina de una comida, calculateBillTotal devuelve la cantidad total debida después de impuestos y propina.
+
+Notas:
+
+Suponga que el impuesto de ventas es 9.5% y la propina es 15%.
+NO incline el impuesto sobre las ventas, solo sobre la cantidad de propina. */
+
+function calculateBillTotal(preTaxAndTipAmount) {
+  let taxPercentage = preTaxAndTipAmount % 9.5;
+  let SunTax = preTaxAndTipAmount+taxPercentage;
+  let tipPercentage = SunTax%15;
+  let tipSunTax= tipPercentage+SunTax
+ 
+  return tipSunTax;
+}
+
+/* ejercicio 9
+Escribe una función llamada convertScoreToGrade.
+Dada una puntuación, convertScoreToGrade devuelve una cadena 
+que representa el grado de letra correspondiente a la puntuación 
+dada.
+Notas:
+(100 - 90) -> 'A'
+(89 - 80) ->' B '
+(79 - 70) -> 'C'
+(69 - 60) -> 'D'
+(59 - 0) -> 'F'
+Si la puntuación dada es mayor que 100 o menor que 0, debe 
+devolver 'PUNTUACION INVALIDA' */
+
+function convertScoreToGrade(score) {
+  if( 0 <= score && 59 >= score){
+    return 'F';
+  }else if (60 <= score &&  69 >= score ) {
+    return 'D';
+  }else if(70 <= score  &&  79 >= score){
+    return 'C';
+  }else if(80 <= score && 89 >= score ){
+   return 'B';
+  }else if(90 <= score && 100 >= score){
+  return 'A';
+  }else{return 'Invalido'}
+};
